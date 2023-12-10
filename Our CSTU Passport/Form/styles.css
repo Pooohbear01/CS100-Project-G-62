@@ -1,10 +1,15 @@
 /* Set the font family for the entire body */
 body {
-  font-family: Arial, sans-serif;
+ background-image: url(../Image/night.png);
+ margin: 0;
+ padding: 0;
+ background-repeat: no-repeat;
+ background-size: cover;
 }
 
 /* Styling for the form container */
 .form-container {
+  background-color: darkslategrey;
   max-width: 600px;
   margin: 20px auto;
   padding: 20px;
@@ -16,6 +21,7 @@ body {
 .form-container h1 {
   text-align: center;
   margin-bottom: 20px;
+  color: white;
 }
 
 /* Styling for each form group */
@@ -27,6 +33,7 @@ body {
 .form-group label {
   display: block;
   font-weight: bold;
+  color: white;
 }
 
 /* Styling for various form input types */
@@ -37,7 +44,7 @@ body {
 .form-group input[type="datetime-local"] {
   width: 100%;
   padding: 8px;
-  border: 1px solid black;
+  border: 1px solid white;
   border-radius: 4px;
   box-sizing: border-box;
 }
@@ -52,6 +59,10 @@ body {
   width: 100%;
 }
 
+.form-group input {
+  width: 100%;
+}
+
 /* Styling for the submit button */
 .form-group input[type="submit"] {
   background-color: orangered;
@@ -60,12 +71,13 @@ body {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  width: 100%;
 }
 
 /* Styling for small helper text */
 .form-group small {
   font-size: 12px;
-  color: #888;
+  color: lightgray;
 }
 
 /* New styles for error messages */
