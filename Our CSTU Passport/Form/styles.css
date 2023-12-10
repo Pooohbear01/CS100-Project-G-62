@@ -59,6 +59,10 @@ body {
   width: 100%;
 }
 
+.form-group input {
+  width: 100%;
+}
+
 /* Styling for the submit button */
 .form-group input[type="submit"] {
   background-color: orangered;
