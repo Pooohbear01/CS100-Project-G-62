@@ -17,7 +17,7 @@ function validateName() {
   }
   return true;
 }
-
+/*
 // Event for input validation on user input
 document.getElementsByName('gender').addEventListener("inputGender")
 
@@ -40,6 +40,7 @@ function validateGender() {
   }
   return true;
 }
+*/
 
 // Function to validate Date of Birth
 function validateDateofBirth(){
@@ -218,3 +219,38 @@ document
   .getElementById("studentID")
   .addEventListener("input", validateStudentID);
 document.getElementById("email").addEventListener("input", validateEmail);
+
+document.addEventListener("DOMContentLoaded", function() {
+  // Function to handle form submission
+  function handleSubmit(event) {
+    event.preventDefault(); // Prevents the default form submission behavior
+
+    // Get form data
+    var formData = {
+      fullname: document.getElementById("fullname").value,
+      gender: document.getElementById("gender").value,
+      doB: document.getElementById("doB").value,
+      studentID: document.getElementById("studentID").value,
+      email: document.getElementById("email").value,
+      faculty: document.getElementById("faculty").value,
+      workTitle: document.getElementById("workTitle").value,
+      activityType: document.getElementById("activityType").value,
+      academicYear: document.getElementById("academicYear").value,
+      semester: document.getElementById("semester").value,
+      date: document.getElementById("date").value,
+      location: document.getElementById("location").value,
+      image: document.getElementById("image").value,
+    };
+
+    // Display form data (you can customize this part)
+    var displayData = "Form Data:\n";
+    for (var key in formData) {
+      displayData += key + ": " + formData[key] + "\n";
+    }
+
+    alert(displayData);
+  }
+
+  // Attach the handleSubmit function to the form's submit event
+  document.getElementById("myForm").addEventListener("submit", handleSubmit);
+});
