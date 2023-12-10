@@ -191,76 +191,66 @@ document.getElementById("myForm").addEventListener("submit", submitForm);
 
 // Event listeners for input validation on user input
 document.getElementById("fullname").addEventListener("input", validateName);
-document
-  .getElementById("studentID")
-  .addEventListener("input", validateStudentID);
+document.getElementById("studentID").addEventListener("input", validateStudentID);
 document.getElementById("email").addEventListener("input", validateEmail);
 
-document.addEventListener("DOMContentLoaded", function() {
-  // Function to handle form submission
-  function handleSubmit(event) {
-    event.preventDefault(); // Prevents the default form submission behavior
-
-    // Get form data
-    var formData = {
-      fullname: document.getElementById("fullname").value,
-      gender: document.getElementById("gender").value,
-      doB: document.getElementById("doB").value,
-      studentID: document.getElementById("studentID").value,
-      email: document.getElementById("email").value,
-      faculty: document.getElementById("faculty").value,
-      workTitle: document.getElementById("workTitle").value,
-      activityType: document.getElementById("activityType").value,
-      academicYear: document.getElementById("academicYear").value,
-      semester: document.getElementById("semester").value,
-      date: document.getElementById("date").value,
-      location: document.getElementById("location").value,
-      image: document.getElementById("image").value,
-    };
-
-    // Display form data (you can customize this part)
-    var displayData = "Form Data:\n";
-    for (var key in formData) {
-      displayData += key + ": " + formData[key] + "\n";
-    }
-
-    alert(displayData);
-  }
-
-  // Attach the handleSubmit function to the form's submit event
-  document.getElementById("myForm").addEventListener("submit", handleSubmit);
-});
-
-function functionName(){
-  if(!validateName() || !validateThaiName()  || !validateStudentID() || !validateEmail()){
+function validation(){
+  if(!validateName() || !validateStudentID() || !validateEmail()){
       return false;
   }
-  showInfo();
-
+  getValuetoResult();
+  showimage();
 }
 
-/*
-function showInfo(){
-  document.getElementById('index.html').style.display='block';
-  var DataUser = {
-      Name: document.getElementById("fullname").value,
-      Gender: document.getElementById("gender").value,
-      DateofBirth: document.getElementById("doB").value,
-      StudentID: document.getElementById("studentID").value,
-      UniversityEmail: document.getElementById("email").value,
-      Faculty: document.getElementById("faculty").value,
-      WorkActivityTitle: document.getElementById("workTitle").value,
-      TypeofWorkActivity: document.getElementById("activityType").value,
-      AcademicYear: document.getElementById("academicYear").value,
-      Semester: document.getElementById("semester").value,
-      Location: document.getElementById("location").value,
-      Picture: document.getElementById("image").value,
-  };
-  var formattedData = '<h2>Fav Act</h2><ul>';
-  for (var key in DataUser) {
-      formattedData += '<li><strong>' + key + ':</strong> ' + DataUser[key] + '</li>';
+function getValuetoResult(){     
+  document.getElementById('submitdate').removeAttribute('hidden')
+  let fullname = document.getElementById('fullname')
+  let gen = document.getElementById('gender')
+  let birth = document.getElementById('doB')
+  let stid = document.getElementById('studentID')
+  let mail = document.getElementById('email')
+  let fact = document.getElementById('faculty')
+  let work = document.getElementById('workTitle')
+  let type = document.getElementById('activityType')
+  let year = document.getElementById('academicYear')
+  let semester = document.getElementById('semester')
+  let date = document.getElementById('dateofWork/Activity')
+  let location = document.getElementById('location')
+
+
+  let res = document.getElementById('showresult')
+  let msg = ''
+  msg += '<p><b>Full Name :</b> '+ fullname.value +'</p>'
+  msg += '<p><b>Gender :</b> '+ gen.value +'</p>'
+  msg += '<p><b>Date of Birth :</b> '+ birth.value +'</p>'
+  msg += '<p><b>Student ID :</b> '+ stid.value +'</p>'
+  msg += '<p><b>University Email :</b> '+ mail.value +'</p>'
+  msg += '<p><b>Faculty :</b> '+ fact.value +'</p>'
+  msg += '<p><b>Work/Activity Title : </b> '+ work.value +'</p>'
+  msg += '<p><b>Type of Work/Activity :</b> '+ type.value +'</p>'
+  msg += '<p><b>Academic Year :</b> ' + year.value +'</p>'
+  msg += '<p><b>Semester :</b> '+ semester.value +'</p>'
+  msg += '<p><b>dateofWork/Activity:</b> '+ date.value +'</p>'
+  msg += '<p><b>Location :</b> '+ location.value +'</p>'
+
+  res.innerHTML = msg
+
+  res.scrollIntoView()
+}
+
+function showimage(){
+  var input = document.getElementById("imageInput");
+  var imageContainer = document.getElementById("showimg");  
+  if (input.files && input.files[0]) {
+      var reader = new FileReader();
+      reader.onload = function(e) {
+          
+          var imageElement = document.createElement("img");
+          imageElement.src = e.target.result;
+          imageElement.width = 300; 
+          imageContainer.innerHTML = ""; 
+          imageContainer.appendChild(imageElement);
+      };
+      reader.readAsDataURL(input.files[0]);
   }
-  formattedData += '</ul>';
-  document.getElementById('DateUser').innerHTML = formattedData;
 }
-*/
