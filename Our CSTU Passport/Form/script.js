@@ -230,3 +230,35 @@ document.addEventListener("DOMContentLoaded", function() {
   // Attach the handleSubmit function to the form's submit event
   document.getElementById("myForm").addEventListener("submit", handleSubmit);
 });
+
+function functionName(){
+  if(!validateName() || !validateThaiName()  || !validateStudentID() || !validateEmail()){
+      return false;
+  }
+  showInfo();
+
+}
+
+function showInfo(){
+  document.getElementById('index.html').style.display='block';
+  var DataUser = {
+      Name: document.getElementById("fullname").value,
+      Gender: document.getElementById("gender").value,
+      DateofBirth: document.getElementById("doB").value,
+      StudentID: document.getElementById("studentID").value,
+      UniversityEmail: document.getElementById("email").value,
+      Faculty: document.getElementById("faculty").value,
+      WorkActivityTitle: document.getElementById("workTitle").value,
+      TypeofWorkActivity: document.getElementById("activityType").value,
+      AcademicYear: document.getElementById("academicYear").value,
+      Semester: document.getElementById("semester").value,
+      Location: document.getElementById("location").value,
+      Picture: document.getElementById("image").value,
+  };
+  var formattedData = '<h2>Fav Act</h2><ul>';
+  for (var key in DataUser) {
+      formattedData += '<li><strong>' + key + ':</strong> ' + DataUser[key] + '</li>';
+  }
+  formattedData += '</ul>';
+  document.getElementById('DateUser').innerHTML = formattedData;
+}
