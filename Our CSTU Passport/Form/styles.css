@@ -33,6 +33,7 @@ body {
 .form-group label {
   display: block;
   font-weight: bold;
+  color: white;
 }
 
 /* Styling for various form input types */
@@ -66,12 +67,13 @@ body {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  width: 100%;
 }
 
 /* Styling for small helper text */
 .form-group small {
   font-size: 12px;
-  color: white;
+  color: lightgray;
 }
 
 /* New styles for error messages */
