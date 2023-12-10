@@ -1,37 +1,101 @@
 /* Set the font family for the entire body */
 body {
- background-image: url(../Image/—Pngtree—beautiful\ background\ of\ starry\ sky_2148622.png);
- background-repeat: no-repeat;
- background-size: cover;
- padding: 0;
- margin: 0;
  font-family: Arial, sans-serif;
 }
 
-.taskbar {
+.image1 {
+  background-color: #fad091;
+  padding: 160px 40px;
+  margin: 0px;
+  background-image: url('../Image/—Pngtree—beautiful\ background\ of\ starry\ sky_2148622.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align:center;
+  position: relative;
+}
+
+.top-header {
   background-color: #e5941b;
-  color: white;
-  z-index: 999;
   padding: 15px;
-  position: fixed;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,css {
+  width: 100%;
+  height: 100%;
+}
+
+.position {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-top: 15%;
+}
+
+.spot {
+  position: absolute;
+  width: 100%;
+  height: 100%;
   top: 0;
   left: 0;
-  width: 100vw;
+}
+.svg-wrapper {
+  margin-top: 0;
+  position: relative;
+  width: 150px;
+  height: 40px;
+  display: inline-block;
+  border-radius: 3px;
+  margin-left: 5px;
+  margin-right: 5px
+}
+#shape {
+  stroke-width: 6px;
+  fill: transparent;
+  stroke: #000000;
+  stroke-dasharray: 85 400;
+  stroke-dashoffset: -220;
+  transition: 1s all ease;
+}
+#text {
+  margin-top: -35px;
   text-align: center;
 }
 
-.taskbar-buttons {
-  display: flex;
-  gap: 20px;
-  justify-content: left;
+.backgroundfirst {
+  background-color: #fad091;
+  padding: 160px 40px;
 }
 
-.taskbar-button {
-  background-color: #e5941b;
-  padding: 10px 20px;
-  border-radius: 3px;
-  cursor: pointer;
+.firsthead {
+  background-color: #fad091;
+  text-align: center;
+  font-size: 30px;
 }
+
+
+#text a {
+  color: #000000;
+  text-decoration: none;
+  font-weight: 100;
+  font-size: 1.1em;
+}
+.svg-wrapper:hover #shape {
+  stroke-dasharray: 50 0;
+  stroke-width: 3px;
+  stroke-dashoffset: 0;
+  stroke: #000000;
+}
+
+.colorful-text {
+  color: #000000;
+}
+
 
 /* Styling for the form container */
 .form-container {
