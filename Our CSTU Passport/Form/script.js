@@ -33,12 +33,34 @@ function validateGender() {
     }
   }
   if(! isChecked) {
-    errorElement.textContent = "Please enter a gender.";
+    errorElement.textContent = "Please enter your gender.";
     return false;
   }else {
     errorElement.textContent = ""; // Clear the error message when valid
   }
   return true;
+}
+
+// Function to validate Date of Birth
+function validateDateofBirth(){
+  var dobInput = document.getElementById('doB');
+  var dobValue = dobInput.value;
+  var errorElement = document.getElementById('doBError');
+  if(dobValue === '') {
+    alert('Please enter your date of birth.');
+    return;
+  }
+  var dobDate = new Date(dobValue);
+  if(isNaN(dobDate.getTime())) {
+    alert('Please enter a valid date of birth.');
+    return;
+  }
+  var currentDate = new Date();
+  if(dobDate > currentDate) {
+    alert('Date of birth cannot be later than the current day.');
+    return;
+  }
+  alert('Date of birth is correct.');
 }
 
 // Function to validate Student ID
