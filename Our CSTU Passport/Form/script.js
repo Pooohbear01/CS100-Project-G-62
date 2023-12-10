@@ -239,6 +239,7 @@ function functionName(){
 
 }
 
+/*
 function showInfo(){
   document.getElementById('index.html').style.display='block';
   var DataUser = {
@@ -262,3 +263,4 @@ function showInfo(){
   formattedData += '</ul>';
   document.getElementById('DateUser').innerHTML = formattedData;
 }
+*/
