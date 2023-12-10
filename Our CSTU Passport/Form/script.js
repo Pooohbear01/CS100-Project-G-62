@@ -17,30 +17,6 @@ function validateName() {
   }
   return true;
 }
-/*
-// Event for input validation on user input
-document.getElementsByName('gender').addEventListener("inputGender")
-
-// Function to validate Gender
-function validateGender() {
-  var genderRadios = document.getElementsByName('gender');
-  var isCheck = false;
-  var errorElement = document.getElementById("genderError");
-  for(var i = 0 ; i < genderRadios.length ; i++) {
-    if(genderRadios[i].checked) {
-      isChecked = true;
-      break;
-    }
-  }
-  if(! isChecked) {
-    errorElement.textContent = "Please enter your gender.";
-    return false;
-  }else {
-    errorElement.textContent = ""; // Clear the error message when valid
-  }
-  return true;
-}
-*/
 
 // Function to validate Date of Birth
 function validateDateofBirth(){
