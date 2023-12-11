@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> -->
+  <title>Forms - Favorite Work/Activity</title>
+  <link rel="stylesheet" href="../Form/styles.css">
+</head>
+<body>
+  
+  <header class="top-headers">
+    <div class="svg-wrapper">
+      <svg height="40" width="150" xmlns="http://www.w3.org/2000/svg">
+        <rect id="shape" height="40" width="150" />
+        <div id="text">
+          <a href="../Cstu G-62.html"><span class="spot"></span>Home</a>
+        </div>
+      </svg>
+    </div>
+  
+    <div class="svg-wrapper">
+      <svg height="40" width="150" xmlns="http://www.w3.org/2000/svg">
+        <rect id="shape" height="40" width="150" />
+        <div id="text">
+          <a href="../Cstu G-62.html"><span class="spot"></span>Info</a>
+        </div>
+      </svg>
+    </div>
+  
+    <div class="svg-wrapper">
+      <svg height="40" width="150" xmlns="http://www.w3.org/2000/svg">
+        <rect id="shape" height="40" width="150" />
+        <div id="text">
+          <a data-scroll href="#Form"><span class="spot"></span>Form</a>
+        </div>
+      </svg>
+    </div>
+  </header>
+  <section id="Form"></section>
+    <div class="image1">
+    <!-- Form Container -->
+    <div class="form-container">
+      <h1>Favorite Work/Activity</h1>
+      <!-- Main Form -->
+      <form id="myForm" action="#" method="post">
+        <!-- Firstname and Lastname Field -->
+        <div class="form-group">
+          <label for="fullname">Firstname and Lastname</label>
+          <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" />
+          <small>Only enter your first name and last name, middle name is not necessary.</small>
+          <span id="fullnameError" class="error"></span>
+        </div>
+
+        <!-- Gender Field -->
+        <div class="form-group">
+          <label for="gender">Gender</label>
+          <select id="gender" name="gender">
+            <option value="" disabled selected>Select an option</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="LGBTQ+">LGBTQ+</option>
+            <span id="genderError" class="error"></span>
+          </select>
+        </div>
+
+        <!-- Date of Birth Field -->
+        <div class="form-group">
+          <label for="doB">Date of Birth</label>
+          <input type="date" id="doB" name="doB" />
+          <span id="doBError" class="error"></span>
+        </div>
+
+        <!-- Student ID Field -->
+        <div class="form-group">
+          <label for="studentID">Student ID</label>
+          <input type="text" id="studentID" name="studentID" placeholder="Enter your ID" />
+          <small>Please enter your 10-digit student ID.</small>
+          <span id="studentIDError" class="error"></span>
+        </div>
+
+        <!-- University Email Field -->
+        <div class="form-group">
+          <label for="email">University Email</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" />
+          <small>Please provide your university email in the format "xxx.yyy@dome.tu.ac.th".</small>
+          <span id="emailError" class="error"></span>
+        </div>
+
+        <!-- Faculty Field -->
+        <div class="form-group">
+          <label for="faculty">Faculty</label>
+          <select id="faculty" name="faculty">
+              <option value="" disabled selected>Select an option</option>
+              <option value="Faculty of Law">Faculty of Law</option>
+              <option value="Thammasat Business School">Thammasat Business School</option>
+              <option value="Faculty of Political Science">Faculty of Political Science</option>
+              <option value="Faculty of Economics">Faculty of Economics</option>
+              <option value="Faculty of Social Administration">Faculty of Social Administration</option>
+              <option value="Faculty of Journalism and Mass Communication">Faculty of Journalism and Mass Communication</option>
+              <option value="Faculty of Sociology and Anthropology">Faculty of Sociology and Anthropology</option>
+              <option value="Puey Ungphakorn School of Development Studies">Puey Ungphakorn School of Development Studies</option>
+              <option value="College Of Innovation">College of Innovation</option>
+              <option value="College of Interdisciplinary Studies">College of Interdisciplinary Studies</option>
+              <option value="Pridi Banomyong International College">Pridi Banomyong International College</option>
+              <option value="Faculty of Learning Sciences and Education">Faculty of Learning Sciences and Education</option>
+              <option value="School of Global Studies">School of Global Studies</option>
+              <option value="Faculty of Liberal Arts">Faculty of Liberal Arts</option>
+              <option value="Faculty of Liberal Arts">Faculty of Liberal Arts</option>
+              <option value="Faculty of Science and Technology">Faculty of Science and Technology</option>
+              <option value="Faculty of Engineering">Faculty of Engineering</option>
+              <option value="AFaculty of Architecture and Planning">Faculty of Architecture and Planning</option>
+              <option value="SIIT">Sirindhorn International Institute of Technology</option>
+              <option value="Faculty of Medicine">Faculty of Medicine</option>
+              <option value="Faculty of Dentistry">Faculty of Dentistry</option>
+              <option value="Faculty of Allied Health Sciences">Faculty of Allied Health Sciences</option>
+              <option value="Faculty of Nursing">Faculty of Nursing</option>
+              <option value="Faculty of Public Health">Faculty of Public Health</option>
+              <option value="Faculty of Pharmacy">Faculty of Pharmacy</option>
+              <option value="Chulabhorn International College of Medicine">Chulabhorn International College of Medicine</option>
+            </select>
+        </div>
+
+        <!-- Work/Activity Title Field -->
+        <div class="form-group">
+          <label for="workTitle">Work/Activity Title</label>
+          <input type="text" id="workTitle" name="workTitle" placeholder="Enter your work/activity title" />
+        </div>
+
+        <!-- Type of Work/Activity Field -->
+        <div class="form-group">
+          <label for="activityType">Type of Work/Activity</label>
+          <select id="activityType" name="activityType">
+            <option value="" disabled selected>Select an option</option>
+            <option value="Course">Course</option>
+            <option value="Activity">Activity</option>
+            <option value="Work">Work</option>
+            <option value="Research">Research</option>
+            <option value="Sports">Sports</option>
+            <option value="Competition">Competition</option>
+            <option value="Computer Science">Computer Science</option>
+          </select>
+        </div>
+
+        <!-- Academic Year Field -->
+        <div class="form-group">
+          <label for="academicYear">Academic Year</label>
+          <select id="academicYear" name="academicYear">
+            <option value="" disabled selected>Select an option</option>
+            <option value="2561">2561</option>
+            <option value="2562">2562</option>
+            <option value="2563">2563</option>
+            <option value="2564">2564</option>
+            <option value="2565">2565</option>
+            <option value="2566">2566</option>
+            <option value="2567">2567</option>
+            <option value="2568">2568</option>
+            <option value="2569">2569</option>
+          </select>
+        </div>
+
+        <!-- Semester Field -->
+        <div class="form-group">
+          <label for="semester">Semester</label>
+          <select id="semester" name="semester">
+            <option value="" disabled selected>Select an option</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="Summer">Summer</option>
+          </select>
+        </div>
+
+        <!-- Date of Work/Activity Field -->
+        <div class="form-group">
+          <label for="dateofWork/Activity">Date of Work/Activity</label>
+          <input type="date" id="dateofWork/Activity" name="dateofWork/Activity" />
+        </div>
+
+        <!-- Location Field -->
+        <div class="form-group">
+          <label for="location">Location</label>
+          <input type="text" id="location" name="location" placeholder="Enter location" />
+        </div>
+
+        <!-- Picture Field -->
+        <div class="form-group">
+          <label for="imageInput">Work/Activity Picture</label>
+          <input type="file" id="imageInput" accept="image/*" />
+        </div>
+
+
+
+        <!-- Submit Button -->
+        <div class="form-group">
+          <button onclick="return validation();"><b>SUBMIT</b></button>
+        </div>
+      </form>
+    </div>
+
+    <div id="displaySection" style="display: none;">
+      <h2>Submitted Data</h2>
+      <pre id="displayData"></pre>
+    </div>
+  
+  
+    <div id="submitdate" hidden>
+      <div class="showresult" id="showresult"></div>
+      <div id="showimg"></div>
+    </div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+  <script src="../Java/node_modules/smooth-scroll/dist/js/smooth-scroll.js"></script>
+  <script>
+    var scroll = new SmoothScroll('a[href*="#"]');
+  </script>
+</div>
+</body>
+</html>
